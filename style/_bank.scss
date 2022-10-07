@@ -1,0 +1,172 @@
+.head {
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+.info {
+  display: flex;
+  font-size: 32px;
+  margin: 20px 0;
+
+  &__text {
+    margin-right: 10px;
+  }
+}
+
+.bank {
+  margin: 0 auto;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__balans {
+    font-size: 32px;
+    margin: 20px;
+    font-weight: bold;
+  }
+
+  &__block {
+    display: flex;
+  }
+
+  &__history {
+    overflow: auto;
+    height: 582px;
+    margin: 10px 0;
+    background-color: blanchedalmond;
+    border: 2px solid rgb(255, 145, 0);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  &__input {
+    width: 150px;
+    margin: 10px 10px 10px 0;
+    height: 25px;
+    border-radius: 5px;
+  }
+}
+
+.typeDate {
+  display: flex;
+}
+
+.transaction {
+  &__row {
+    margin: 20px;
+    border-bottom: 2px solid rgb(71, 71, 71);
+  }
+
+  &__value {
+    margin-left: 10px;
+  }
+
+  &__date {
+    margin-right: 10px;
+  }
+
+  &__type {
+    &-deposit {
+      color: rgb(0, 155, 52);
+    }
+
+    &-widthdrawl {
+      color: rgb(255, 47, 82);
+    }
+  }
+}
+
+.transfer {
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(255, 223, 223);
+  border: 2px solid red;
+  border-radius: 10px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__button {
+    margin: auto 10px;
+    height: 37px;
+    border-radius: 5px;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+}
+
+.loan {
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(255, 250, 184);
+  border: 2px solid yellow;
+  border-radius: 10px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__form {
+    display: flex;
+  }
+}
+
+.close {
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(199, 248, 195);
+  border: 2px solid rgb(0, 255, 0);
+  border-radius: 10px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__form {
+    display: flex;
+  }
+}
+
+.summary {
+  display: flex;
+  margin: 20px 0;
+  font-size: 24px;
+
+  &__received {
+    display: flex;
+  }
+
+  &__issued {
+    margin-left: 20px;
+    display: flex;
+  }
+
+  &__text {
+    margin-right: 10px;
+  }
+
+  &__num {
+    &-plus {
+      color: green;
+      font-weight: bold;
+    }
+
+    &-minus {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}

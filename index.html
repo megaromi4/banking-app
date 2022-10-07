@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="registration" style="display: block">
+        <form action="#" class="registration__form" name="registration__form">
+          <div class="registration__title">Ваше имя</div>
+          <input
+            class="registration__input"
+            type="text"
+            name="registration__name"
+            id="registration__name"
+            placeholder="Введите ваше имя"
+          />
+          <div class="registration__title">Ваш пароль</div>
+          <input
+            class="registration__input"
+            type="password"
+            name="registration__password"
+            id="registration__password"
+            placeholder="Введите ваш пароль"
+          />
+          <input type="submit" class="registration__button button" />
+        </form>
+      </div>
+      <div class="bank" style="display: none">
+        <header class="head"></header>
+        <div class="bank__info">
+          <div class="info">
+            <div class="info__text">Текущий баланс на</div>
+            <div class="info__date"></div>
+          </div>
+          <div class="bank__balans"></div>
+        </div>
+        <div class="bank__block">
+          <div class="bank__history"></div>
+          <div class="bank__transaction">
+            <div class="transfer">
+              <div class="transfer__title">Перевести деньги</div>
+              <form action="" class="transfer__form">
+                <div class="transfer__group">
+                  <input
+                    class="bank__input"
+                    type="text"
+                    name="trasfer__recipient"
+                    id="trasfer__recipient"
+                    placeholder="Введите имя"
+                  />
+                  <p class="transfer__text">Получатель</p>
+                </div>
+                <div class="transfer__group">
+                  <input
+                    class="bank__input"
+                    type="number"
+                    name="trasfer__sum"
+                    id="trasfer__sum"
+                    placeholder="Введите сумму"
+                  />
+                  <p class="transfer__text">Сумма</p>
+                </div>
+                <button class="transfer__button button">Отправить</button>
+              </form>
+            </div>
+            <div class="loan">
+              <div class="loan__title">Запросить займ</div>
+              <form action="" class="loan__form">
+                <div class="loan__group">
+                  <input
+                    class="bank__input"
+                    type="number"
+                    name="loan__sum"
+                    id="loan__sum"
+                    placeholder="Введите сумму"
+                  />
+                  <p class="transfer__text">Сумма</p>
+                </div>
+                <button class="transfer__button button">Отправить</button>
+              </form>
+            </div>
+            <div class="close">
+              <div class="close__title">Закрыть счет</div>
+              <form action="" class="close__form">
+                <div class="close__group">
+                  <input
+                    class="bank__input"
+                    type="text"
+                    name="close__name"
+                    id="close__name"
+                    placeholder="Введите ваше имя"
+                  />
+                  <p class="transfer__text">Подтвердить имя</p>
+                </div>
+                <div class="transfer__group">
+                  <input
+                    class="bank__input"
+                    type="password"
+                    name="transfer__password"
+                    id="transfer__password"
+                    placeholder="Введите ваш пароль"
+                  />
+                  <p class="transfer__text">Подтвердите пароль</p>
+                </div>
+                <button class="transfer__button button">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="summary">
+          <div class="summary__received">
+            <div class="summary__text">Получение:</div>
+            <div class="summary__num-plus">0.00$</div>
+          </div>
+          <div class="summary__issued">
+            <div class="summary__text">Вывод:</div>
+            <div class="summary__num-minus">0.00$</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
