@@ -43,7 +43,7 @@
           <div class="bank__history"></div>
           <div class="bank__transaction">
             <div class="transfer">
-              <div class="transfer__title">Перевести деньги</div>
+              <div class="bank__title">Перевести деньги</div>
               <form action="" class="transfer__form">
                 <div class="transfer__group">
                   <input
@@ -53,7 +53,7 @@
                     id="trasfer__recipient"
                     placeholder="Введите имя"
                   />
-                  <p class="transfer__text">Получатель</p>
+                  <p class="bank__text">Получатель</p>
                 </div>
                 <div class="transfer__group">
                   <input
@@ -63,9 +63,11 @@
                     id="trasfer__sum"
                     placeholder="Введите сумму"
                   />
-                  <p class="transfer__text">Сумма</p>
+                  <p class="bank__text">Сумма</p>
                 </div>
-                <button class="transfer__button button">Отправить</button>
+                <button id="transfer-btn" class="bank__button button">
+                  Отправить
+                </button>
               </form>
             </div>
             <div class="loan">
@@ -79,9 +81,11 @@
                     id="loan__sum"
                     placeholder="Введите сумму"
                   />
-                  <p class="transfer__text">Сумма</p>
+                  <p class="bank__text">Сумма</p>
                 </div>
-                <button class="transfer__button button">Отправить</button>
+                <button id="loan-btn" class="bank__button button">
+                  Отправить
+                </button>
               </form>
             </div>
             <div class="close">
@@ -95,19 +99,21 @@
                     id="close__name"
                     placeholder="Введите ваше имя"
                   />
-                  <p class="transfer__text">Подтвердить имя</p>
+                  <p class="bank__text">Подтвердить имя</p>
                 </div>
-                <div class="transfer__group">
+                <div class="close__group">
                   <input
                     class="bank__input"
                     type="password"
-                    name="transfer__password"
-                    id="transfer__password"
+                    name="close__password"
+                    id="close__password"
                     placeholder="Введите ваш пароль"
                   />
-                  <p class="transfer__text">Подтвердите пароль</p>
+                  <p class="bank__text">Подтвердите пароль</p>
                 </div>
-                <button class="transfer__button button">Отправить</button>
+                <button id="close-btn" class="bank__button button">
+                  Отправить
+                </button>
               </form>
             </div>
           </div>

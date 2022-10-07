@@ -421,6 +421,18 @@ template {
   height: 25px;
   border-radius: 5px;
 }
+.bank__button {
+  margin: auto 10px;
+  height: 37px;
+  border-radius: 5px;
+}
+.bank__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.bank__text {
+  font-size: 20px;
+}
 
 .typeDate {
   display: flex;
@@ -450,20 +462,8 @@ template {
   border: 2px solid red;
   border-radius: 10px;
 }
-.transfer__title {
-  font-size: 20px;
-  font-weight: bold;
-}
 .transfer__form {
   display: flex;
-}
-.transfer__button {
-  margin: auto 10px;
-  height: 37px;
-  border-radius: 5px;
-}
-.transfer__text {
-  font-size: 20px;
 }
 
 .loan {

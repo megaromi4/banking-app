@@ -37,6 +37,8 @@ form.addEventListener("submit", (e) => {
 
   if (currentAccount) {
     if (currentAccount.pin === password) {
+      form.elements.registration__name.value = "";
+      form.elements.registration__password.value = "";
       document.querySelector(".registration").style.display = "none";
       document.querySelector(".bank").style.display = "block";
       document.querySelector(
@@ -93,8 +95,7 @@ function displayTotal() {
     : `${widthdrawl}$`;
 }
 
-function makeTransaction(e) {
-  e.preventDefault();
+function makeTransaction() {
   const recipient = document.querySelector("#trasfer__recipient").value;
   const sum = document.querySelector("#trasfer__sum").value;
   if (
@@ -123,6 +124,49 @@ function makeTransaction(e) {
   }
 }
 
-document
-  .querySelector(".transfer__button")
-  .addEventListener("click", (e) => makeTransaction(e));
+document.querySelector("#transfer-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  makeTransaction();
+});
+
+document.querySelector("#loan-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const sum = +document.querySelector("#loan__sum").value;
+  if (currentAccount.transactions.some((i) => i >= sum * 0.1)) {
+    currentAccount.transactions.push(sum);
+    currentAccount.transactionsDate.push(new Date().toISOString());
+    transactionContainer.innerHTML += `
+        <div class="transaction__row">
+            <div class="typeDate">
+                <div class="transaction__date">${new Date(
+                  currentAccount.transactionsDate[
+                    currentAccount.transactionsDate.length - 1
+                  ]
+                ).toLocaleDateString()}</div>
+                <div class="transaction__type-deposit">deposit</div>
+                <div class="transaction__value"><b>${sum}</b></div>
+            </div>
+        </div>
+        `;
+    displayTotal();
+    document.querySelector("#loan__sum").value = "";
+  } else {
+    alert("Займ отклонен");
+    document.querySelector("#loan__sum").value = "";
+  }
+});
+
+document.querySelector("#close-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const name = document.querySelector("#close__name").value;
+  const pin = +document.querySelector("#close__password").value;
+  if (name === currentAccount.userName && pin === currentAccount.pin) {
+    const ind = accounts.findIndex((i) => i.userName === name);
+    accounts.splice(ind, 1);
+    document.querySelector(".registration").style.display = "block";
+    document.querySelector(".bank").style.display = "none";
+    console.log(accounts);
+  } else {
+    alert("Неверные данные");
+  }
+});

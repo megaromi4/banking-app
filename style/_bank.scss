@@ -48,6 +48,21 @@
     height: 25px;
     border-radius: 5px;
   }
+
+  &__button {
+    margin: auto 10px;
+    height: 37px;
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
 }
 
 .typeDate {
@@ -86,23 +101,8 @@
   border: 2px solid red;
   border-radius: 10px;
 
-  &__title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
   &__form {
     display: flex;
-  }
-
-  &__button {
-    margin: auto 10px;
-    height: 37px;
-    border-radius: 5px;
-  }
-
-  &__text {
-    font-size: 20px;
   }
 }
 
